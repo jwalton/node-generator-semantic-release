@@ -1,0 +1,47 @@
+{
+  "name": "generator-semantic-release",
+  "version": "1.0.0",
+  "description": "Adds semantic-release to an existing project.",
+  "homepage": "https://github.com/jwalton/node-generator-semantic-release",
+  "author": {
+    "name": "Jason Walton",
+    "email": "dev@lucid.thedreaming.org",
+    "url": "https://www.thedreaming.org/"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "semantic-release",
+    "yeoman",
+    "yo",
+    "yeoman-generator"
+  ],
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-benbria": "^3.0.2",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-promise": "^3.7.0"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "dependencies": {
+    "chalk": "^2.1.0",
+    "keytar": "^4.2.1",
+    "js-yaml": "^3.11.0",
+    "yeoman-generator": "^2.0.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "prepublishOnly": "nsp check",
+    "pretest": "eslint .",
+    "precommit": "lint-staged",
+    "test": "jest"
+  },
+  "repository": "jwalton/node-generator-semantic-release",
+  "license": "MIT"
+}
