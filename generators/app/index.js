@@ -162,10 +162,7 @@ module.exports = class extends Generator {
         }
 
         // Remove existing release stage
-        const oldReleaseStage = travisConfig.jobs.include.find(job => job.stage === 'include');
-        if(oldReleaseStage) {
-            travisConfig.jobs.include = travisConfig.jobs.include.filter(job => job !== oldReleaseStage);
-        }
+        travisConfig.jobs.include = travisConfig.jobs.include.filter(job => job.stage !== 'release');
 
         // Add new release stage
         const beforeInstall = ['npm install -g npm'];
