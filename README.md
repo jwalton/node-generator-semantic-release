@@ -32,6 +32,17 @@ Then run in an existing project:
 yo semantic-release
 ```
 
+## Development
+
+To test changes, run:
+
+```sh
+npm pack .
+npm install -g ./generator-semantic-release-*.tgz
+```
+
+And then you can run `yo semantic-release` in another project.
+
 ## License
 
 MIT © [Jason Walton](https://www.thedreaming.org/)
