@@ -226,8 +226,6 @@ module.exports = class extends (
                 (job) => job.stage !== 'release'
             );
 
-            travisConfigured = true;
-
             // Add new release stage
             const beforeInstall = ['npm install -g npm'];
 
